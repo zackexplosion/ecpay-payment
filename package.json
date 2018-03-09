@@ -1,6 +1,6 @@
 {
   "name": "ecpay-payment",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "綠界全方位金流串接用SDK",
   "main": "./lib/index.js",
   "dependencies": {
@@ -21,6 +21,18 @@
     "node",
     "package"
   ],
-  "author": "ying.wu <ying.wu@opay.tw>",
-  "license": "ISC"
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andy6804tw/ECPAY-Payment.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andy6804tw/ECPAY-Payment/issues"
+  },
+  "homepage": "https://github.com/andy6804tw/ECPAY-Payment#readme"
 }

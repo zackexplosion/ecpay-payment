@@ -44,7 +44,7 @@ let htm = create.payment_client.aio_check_out_all(parameters = base_param, invoi
 MIT
 
 
-[npm-image]: https://img.shields.io/badge/npm-v1.1.0-blue.svg
+[npm-image]: https://img.shields.io/badge/npm-v1.1.1-blue.svg
 [npm-url]: https://www.npmjs.com/package/imgur-module
 
 [license-image]: https://img.shields.io/npm/l/express.svg?registry_uri=https%3A%2F%2Fregistry.npmjs.com
