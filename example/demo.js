@@ -14,7 +14,7 @@ let inv_params = {};
 const initParm = (total, item) => {
   base_param = {
     MerchantTradeNo: random.RandomChar(20), //請帶20碼uid, ex: f0a0d7e9fae1bb72bc93
-    MerchantTradeDate: '2017/02/13 15:45:30', //ex: 2017/02/13 15:45:30
+    MerchantTradeDate: '2018/02/13 15:45:30', //ex: 2018/02/13 15:45:30
     TotalAmount: total,
     TradeDesc: 'Quapni前打輪系列',
     ItemName: item,

@@ -1,34 +1,51 @@
-# 綠界 全方位(All In One)金流介接Node.js 第一版
----
+[![NPM version][npm-image]][npm-url] 
+[![GitHub license][license-image]][license-url]
+# 綠界全方位(All In One)金流介接模組
 
-## 1. 介紹
+## Module Usage
 
-  - 綠界對於有收款需求的會員，提供完整的交易介接API，並有多種收款方式(All In One)可選擇使用。 本套件為Node.js版，可使用作建立訂單，接受付款通知，查詢訂單等金流交易的應用。
-  - 收款方式清單：
-    - 信用卡(一次付清、分期付款、定期定額)
-    - 網路ATM
-    - ATM櫃員機
-    - 超商代碼
-    - 超商條碼
-    - Apple Pay
-    - Android Pay
+### Installation
+Install the project dependencies.You can use npm or yarn(recommended) for dependency management。
+
+```bash
+## npm
+npm install ecpay-payment --save
+```
+
+### Usage
+
+```js
+const ecpay_payment = require('ecpay-payment');
+
+// 結帳資訊
+let base_param = {};
+// 電子發票
+let inv_params = {};
+
+const initParm = (total, item) => {
+  base_param = {
+    MerchantTradeNo: 'f0a0d7e9fae1bb72bc93', //請帶20碼uid, ex: f0a0d7e9fae1bb72bc93
+    MerchantTradeDate: '2018/02/13 15:45:30', //ex: 2018/02/13 15:45:30
+    TotalAmount: total,
+    TradeDesc: '交易描述',
+    ItemName: item,
+    ReturnURL: 'https://55e9298f.ngrok.io/result',
+    InvoiceMark: 'Y',
+    Remark: '交易備註',
+    CustomField1: '紅色*1',
+  };
+}
+initParm(200, 'product');
+let create = new ecpay_payment();
+let htm = create.payment_client.aio_check_out_all(parameters = base_param, invoice = inv_params);
+```
+
+## License
+MIT
 
 
-## 2. 安裝環境
-  - node-v6.11.0-x64  以上
-  - ECMAScipt6
- 
+[npm-image]: https://img.shields.io/badge/npm-v1.1.0-blue.svg
+[npm-url]: https://www.npmjs.com/package/imgur-module
 
-## 3. 使用教學
-  - 使用者文件放置於Doc資料夾內，可供參閱
-  
-
-
-## 4. 聯絡我們
-  - 綠界技術客服信箱: techsupport@ecpay.com.tw
-
-
-
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
+[license-image]: https://img.shields.io/npm/l/express.svg?registry_uri=https%3A%2F%2Fregistry.npmjs.com
+[license-url]: https://github.com/andy6804tw/imgur-module/blob/master/LICENSE
