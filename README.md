@@ -4,6 +4,13 @@
 
 ## Module Usage
 
+### Main Changed
+* remove console.log
+* change param `CustomerName` length limit to fit latest DOCUMENT.
+
+![image](https://user-images.githubusercontent.com/5180966/45922108-eb5ff700-bef5-11e8-89ea-b7ad8b35e39f.png)
+
+
 ### Installation
 Install the project dependencies.You can use npm or yarn(recommended) for dependency management。
 
